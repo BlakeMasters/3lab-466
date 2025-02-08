@@ -1,0 +1,30 @@
+Files:
+#Blake Masters
+bemaster@calpoly.edu
+c45.py
+    -Contains c45Node and c45 classes
+        -predict method inside of c45 as it was initially asked to be a method in lab description
+        -Notably, c45 would like the dict produced from modified_csv.py to determine numeric or categorical for attributes
+        -Internal tree structure does not mimmick output json format so there is handling accordingly
+    
+modified_csv.py
+    -csv_handler(filepath) function call
+
+hscript.py
+    -writes hyperparams.json for cross validation. manually change in file if desired
+    -$ python3 hscript.py
+    
+crossVal.py
+    -10 cross evaluations based on InfoGain and Ratio given in hyperparams.json
+    -$ python3 crossVal.py <csvfilename/location> <hyperparams.json>
+    
+
+crossValSKL.py
+    -sci-kit cross validation
+    -$ python3 crossValSKL.py <csvfilename/location> <hyperparams.json>
+    
+InduceC45.py
+    -$ python3 InduceC45 <TrainingSetFile.csv> [<fileToSave>]
+    
+predict.py
+    -$ python3 predict.py <CSVFile> <JSONFile> [eval]

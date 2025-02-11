@@ -1,0 +1,49 @@
+Selected Mode: sklearn
+
+Grid Search Parameter Grid:
+{'n_estimators': [50, 100, 200], 'max_features': ['sqrt', 'log2', None], 'max_depth': [None, 10, 20, 30]}
+
+Best Hyperparameters:
+{'max_depth': None, 'max_features': None, 'n_estimators': 200}
+
+Training Accuracy: 100.00%
+Training Confusion Matrix:
+[[3450    0    0    0]
+ [   0 3393    0    0]
+ [   0    0 3259    0]
+ [   0    0    0  266]]
+
+Test Accuracy: 99.69%
+Test Confusion Matrix:
+[[870   0   0   0   0]
+ [  0 867   0   4   2]
+ [  0   0   0   0   2]
+ [  0   0   0 785   0]
+ [  0   0   0   0  62]]
+
+Classification Report (Training):
+              precision    recall  f1-score   support
+
+   not_recom       1.00      1.00      1.00      3450
+    priority       1.00      1.00      1.00      3393
+  spec_prior       1.00      1.00      1.00      3259
+  very_recom       1.00      1.00      1.00       266
+
+    accuracy                           1.00     10368
+   macro avg       1.00      1.00      1.00     10368
+weighted avg       1.00      1.00      1.00     10368
+
+
+Classification Report (Test):
+              precision    recall  f1-score   support
+
+   not_recom       1.00      1.00      1.00       870
+    priority       1.00      0.99      1.00       873
+   recommend       0.00      0.00      0.00         2
+  spec_prior       0.99      1.00      1.00       785
+  very_recom       0.94      1.00      0.97        62
+
+    accuracy                           1.00      2592
+   macro avg       0.79      0.80      0.79      2592
+weighted avg       1.00      1.00      1.00      2592
+
